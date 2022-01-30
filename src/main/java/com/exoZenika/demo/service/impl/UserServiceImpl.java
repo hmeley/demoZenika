@@ -46,6 +46,27 @@ public class UserServiceImpl implements UserService {
 		userBo.setName(user.getName());
 		return userBo;
 	}
+
+	@Override
+	public void saveUser(UserBO userBO) {	
+		User user = boToRepo(userBO);	
+		userRepo.save(user);
+	}
+	
+	
+	
+	/**
+	 * Adapter de l'objet user issue du repository vers le userBO
+	 * @param user le user issue de la couche service
+	 * @return le user repository
+	 */
+	private User boToRepo(UserBO userBO) {
+		User user = new User();
+		user.setId(userBO.getId());
+		user.setMail(userBO.getMail());
+		user.setName(userBO.getName());
+		return user;
+	}
 	
 	
 

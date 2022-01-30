@@ -5,6 +5,10 @@ package com.exoZenika.demo.service.bo;
  */
 public class UserBO {
 	
+	@Override
+	public String toString() {
+		return "UserBO [mail=" + mail + ", name=" + name + "]";
+	}
 	private String mail;
 	private long id;
 	private String name;

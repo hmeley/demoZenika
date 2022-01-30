@@ -33,7 +33,7 @@ public class User {
 	 * @param mail
 	 * @param name
 	 */
-	public User(String mail, String name) {
+	public User(String name, String mail) {
 		this.mail = mail;
 		this.name = name;
 	}
